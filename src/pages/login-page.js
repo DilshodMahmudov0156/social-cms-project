@@ -1,23 +1,37 @@
-import React from "react";
-import { auth, provider } from "../configs/FirebaseConfig";
-import {GoogleAuthProvider, signInWithPopup} from "firebase/auth";
+import React, {useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
+
+    useEffect(() => {
+        fetch('http://localhost:3000/books')
+            .then(response => response.json())
+            .then(json => setUsers(json))
+    }, []);
+
+    const [users, setUsers] = useState(null);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirm, setConfirm] = useState('');
     const navigate = useNavigate();
-    const popupLogin = () => {
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                const user = result.user;
-                console.log(user);
-                localStorage.setItem("userPhoto", user.photoURL);
-                localStorage.setItem("userEmail", user.email);
-                localStorage.setItem("userId", user.uid);
-                navigate("/profile");
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+
+    const firstGet = (e) => {
+        setUsername(e.target.value)
+        console.log(username)
+    }
+    const secondGet = (e) => {
+        setPassword(e.target.value)
+        console.log(password)
+    }
+    const thirdGet = (e) => {
+        setConfirm(e.target.value)
+        console.log(confirm)
+    }
+
+    const signUp = (e) => {
+        e.preventDefault();
+        users.find(item => item.username !== username)
+        console.log(users);
     }
     return (
         <div className="login-body">
@@ -26,32 +40,17 @@ function LoginPage() {
                     <div className="col-xl-5 mt-5">
                         <div className="my-card">
                             <div className="my-card-body">
-                                <button className="login-btn" onClick={popupLogin}>
-                                    <span>
-                                        <span className="form-btn-span">
-                                            <i className="bi bi-google"></i>
-                                        </span>
-                                        <span>Continue with Google</span>
-                                    </span>
-                                </button>
-                                <button className="login-btn">
-                                    <span>
-                                        <span className="form-btn-span">
-                                            <i className="bi bi-facebook"></i>
-                                        </span>
-                                        <span>Continue with Facebook</span>
-                                    </span>
-                                </button>
-                                <div className="d-flex justify-content-between align-items-center mt-4">
-                                    <div className="border-div"></div>
-                                    <div className="btn-between-borders">OR</div>
-                                    <div className="border-div"></div>
-                                </div>
-                                <form>
-                                    <label htmlFor="" className="my-2 mt-3">Your email</label>
-                                    <input type="email" placeholder="Enter your email"/>
-                                    <label htmlFor="" className="my-2">Your password</label>
-                                    <input type="password" placeholder="Enter your password"/>
+                                <h1 className="text-center">Sign up</h1>
+                                <br/>
+                                <form onSubmit={(e) => {
+                                    signUp(e)
+                                }}>
+                                    <label htmlFor="user" className="my-2 mt-3">Your email</label>
+                                    <input type="" placeholder="Set username" id="user" onChange={(e)=>{firstGet(e)}}/>
+                                    <label htmlFor="pass" className="my-2 mt-3">Your password</label>
+                                    <input type="password" placeholder="Enter your password" id="pass" onChange={(e)=>{secondGet(e)}}/>
+                                    <label htmlFor="confirm" className="my-2 mt-3">Confirm password</label>
+                                    <input type="password" placeholder="Enter your confirm password" id="confirm" onChange={(e)=>{thirdGet(e)}}/>
                                     <button className="submit-btn">
                                         Submit
                                     </button>
