@@ -1,0 +1,41 @@
+.book-card{
+    position: relative;
+}
+/*.book-card:hover .edit-delete{*/
+/*    display: inline;*/
+/*}*/
+.edit-delete{
+    display: inline;
+    /*background-color: black;*/
+    position: absolute;
+    top: 10px;
+    right: -46px;
+}
+.btn-top{
+    /*width: 35px;*/
+    /*height: 35px;*/
+    color: #FEFEFE;
+    background-color: #FF4D4F;
+    font-size: 18px;
+    padding: 8px 13px;
+    border-radius: 8px 8px 8px 0px;
+    border: none;
+    display: block;
+}
+.btn-bottom{
+    /*width: 35px;*/
+    /*height: 35px;*/
+    color: #FEFEFE;
+    background-color: #7b00ee;
+    font-size: 18px;
+    padding: 8px 13px;
+    border-radius: 0px 8px 8px 8px;
+    border: none;display: block;
+    margin-top: 3px;
+}
+.btn-top:hover{
+    opacity: 0.8;
+}
+.btn-bottom:hover{
+    opacity: 0.7;
+}

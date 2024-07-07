@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "name": "Raspberry Pi User Guide",
+      "cover": "http://url.to.book.cover",
+      "pages": "221",
+      "published": "2012",
+      "isbn": "9781118464465",
+      "author": "Eben Upton",
+      "userId": "1",
+      "userEmail": "Felix IT solitions"
+    },
+    {
+      "obj": {
+        "name": "Some Storydsfdf",
+        "cover": "https::/some-story/book",
+        "pages": "201",
+        "published": "2023",
+        "isbn": "1546546876545",
+        "author": "Somebody that I used to know"
+      },
+      "name": "Some Story for children",
+      "cover": "https://some-story/book",
+      "pages": "201",
+      "published": "2023",
+      "isbn": "1546546876545",
+      "author": "Somebody",
+      "id": "849946cc-5dac-466b-ba35-bfc0c9c59f38",
+      "userId": "YyKYpZ1nnCMisLSkY683LdoPRQ83",
+      "userEmail": "dilshodjonmahmudov30@gmail.com"
+    },
+    {
+      "id": "a862d4a1-c02d-4b64-a889-18ad7b72d30f",
+      "name": "Interesting book",
+      "cover": "https://interesting.com/",
+      "pages": "158",
+      "published": "2024",
+      "isbn": "5465132654",
+      "author": "John Doe",
+      "userId": "YyKYpZ1nnCMisLSkY683LdoPRQ83",
+      "userEmail": "dilshodjonmahmudov30@gmail.com"
+    }
+  ],
+  "users": []
+}

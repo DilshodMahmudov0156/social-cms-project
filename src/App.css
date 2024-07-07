@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Mulish", sans-serif;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+.app{
+    width: 100%;
+    height: 100vh;
+    /*background-color: #e6ded3;*/
+    background-color: #FEFEFE;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url("./images/bg.png");
+    background-size: 85%;
+    background-position-x: -60px;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+.my-container{
+    width: 83%;
+    height: auto;
+}
+.my-content{
+    overflow-y: scroll;
+    height: 700px;
+    /*border: 1px solid white;*/
+}
+.my-content::-webkit-scrollbar{
+    width: 0px;
+}
+.nav-in{
+
+}
+.my-btn{
+    padding: 20px;
+    border: none;
+    background-color: red;
+    border-radius: 5px;
+}
+.login-body{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+input{
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid #EBEBEB;
+    padding: 12px 16px;
+}
+input:focus{
+    outline: 1px solid #6200ee;
+}
+.my-card{
+    background-color: #ffffff;
+    border-radius: 12px;
+    background-color: #FEFEFE;
+    padding: 48px 28px;
+}
+.login-btn{
+    width: 100%;
+    display: block;
+    padding: 10px 0px;
+    margin-top: 16px;
+    background: none;
+    border: 1px solid #151515;
+    border-radius: 4px;
+}
+.form-btn-span{
+    margin-right: 20px;
+}
+.border-div{
+    width: 100%;
+    height: 0px;
+    border-top: 1px solid #24272C;
+}
+.btn-between-borders{
+    margin: 0px 20px;
+}
+.submit-btn{
+    width: 100%;
+    color: #FEFEFE;
+    padding: 10px 0px;
+    background-color: #6200ee;
+    border-radius: 4px;
+    border: none;
+    margin-top: 35px;
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.logo{
+    width: 150px;
+    height: auto;
+}
+.search-icon{
+    margin-right: -30px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+.search-bar{
+    width: 380px;
+    height: 45px;
+    background: none;
+    border: none;
+    padding: 0px 30px 0px 40px;
+}
+.search-bar:focus{
+    outline: none;
+    background-color: #FEFEFE;
+}
+
+/*profile styles*/
+
+.new-btn{
+    padding: 3px 15px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    background-color:  #FF0000;
+}
+.notify-icon{
+    background: none;
+    border: none;
+    font-size: 25px;
+    position: relative;
+}
+.notify-point{
+    width: 9px;
+    height: 9px;
+    background-color: red;
+    border: 2px solid #FEFEFE;
+    border-radius: 5px;
+    position: absolute;
+    top: 11px;
+    right: 2px;
+}
+.profile-image{
+    width: 43px;
+    height: 43px;
+    border: 3px solid #d13ae0;
+    border-radius: 50%;
+    margin-left: 30px;
+    overflow: hidden;
+ }
+.profile-image img{
+    width: 100%;
+    height: auto;
+}
+.header-text{
+    font-size: 36px;
+    font-weight: 700;
+    color: #FEFEFE;
+    margin-top: 40px;
+}
+.quantity{
+    color: #7b00ee;
+}
+.header-text-2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #FEFEFE;
+}
+.create-modal{
+    padding: 10px 30px 10px 30px;
+    color: #FEFEFE;
+    background-color: #6200EE;
+    border: none;
+    border-radius: 4px;
+}
+.card-out{
+    padding: 25px;
+}
+
+.book-card{
+    width: 100%;
+    height: auto;
+    background-color: #FEFEFE;
+    padding: 32px;
+    border-radius: 12px;
+}
+.my-modal{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.49);
+    backdrop-filter: blur(3px);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.my-row{
+    height: 100vh;
+}
+.my-modal-content{
+    width: 100%;
+    height: auto;
+    padding: 24px 28px;
+    border-radius: 12px;
+    background-color: #FEFEFE;
+    display: block;
+}
+.modal-text{
+    font-size: 20px;
+    color: #151515;
+    font-weight: 600;
+}
+.my-modal-content b{
+    font-size: 14px;
+    color: #151515;
+}
+.close-btn{
+    background: none;
+    font-size: 20px;
+    border: none;
+}
+.submiter-btn{
+    width: 50%;
+    height: auto;
+    font-weight: 500;
+    padding: 10px 24px;
+    margin-left: 15px;
+    color: #FEFEFE;
+    background-color: #6200EE;
+    border: none;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+.cancel-btn{
+    width: 50%;
+    height: auto;
+    font-weight: 500;
+    color: #6200EE;
+    background: none;
+    border: 1px solid #6200EE;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+.submiter-btn:hover{
+    opacity: 0.8;
+}
+.cancel-btn:hover{
+    background-color: rgba(98, 0, 238, 0.71);
+    color: white;
+}
+.my-link{
+    color: #ffffff;
+    font-weight: 500;
+}
+.my-link.active{
+    color: #6200EE;
+    font-weight: 900;
+}
