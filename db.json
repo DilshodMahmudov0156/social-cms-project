@@ -40,7 +40,48 @@
       "author": "John Doe",
       "userId": "YyKYpZ1nnCMisLSkY683LdoPRQ83",
       "userEmail": "dilshodjonmahmudov30@gmail.com"
+    },
+    {
+      "id": "817527ed-b0dc-47ea-93f4-100af1d1aac0",
+      "name": "sfsd",
+      "cover": "fsgfg",
+      "pages": "45",
+      "published": "2014",
+      "isbn": "14497944644",
+      "author": "gsgdfgsfgffsfgsfgs",
+      "userId": "3ba038ec-4821-43fa-b0bf-abc536572356",
+      "userEmail": null
+    },
+    {
+      "id": "714d0293-bfd8-4735-b29c-f4233f854c4f",
+      "name": "sdfgsd",
+      "cover": "fdsgdfg",
+      "pages": "45",
+      "published": "2013",
+      "isbn": "5465412",
+      "author": "gfdgsdgsdg",
+      "userId": "3ba038ec-4821-43fa-b0bf-abc536572356",
+      "userEmail": null
     }
   ],
-  "signup": []
+  "signup": [
+    {
+      "id": "8c5b6f62-b9b3-4620-85fe-bdb966f1a9e0",
+      "userId": "3ba038ec-4821-43fa-b0bf-abc536572356",
+      "username": "g",
+      "password": "g"
+    },
+    {
+      "id": "63955152-fa6b-4bfb-97f4-4a603704d82c",
+      "userId": "eccd1288-852e-49d0-9591-6502639d6a06",
+      "username": "Dilshod0156",
+      "password": "dilshod0156"
+    },
+    {
+      "id": "c598a7c0-b159-49f4-997c-d84609a6e618",
+      "userId": "e6873616-5aba-4a76-a5ca-3b048882d086",
+      "username": "dm0156",
+      "password": "dilshod0156"
+    }
+  ]
 }

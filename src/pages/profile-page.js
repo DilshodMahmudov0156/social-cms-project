@@ -12,7 +12,7 @@ function ProfilePage({ profile, makeShow, data, openDelete, showUpdater }) {
                 <div className="d-flex justify-content-between align-items-center mt-5 px-4">
                     <div className="texts">
                         <h2 className="header-text">
-                            You’ve got <span className="quantity">{data.length} book{data.length > 1? "s": null}</span>
+                            You’ve got <span className="quantity">{data.filter(item => item.userId === userId).length} book{data.length > 1? "s": null}</span>
                         </h2>
                         <h4 className="header-text-2">Your books today</h4>
                     </div>
@@ -20,7 +20,7 @@ function ProfilePage({ profile, makeShow, data, openDelete, showUpdater }) {
                 </div>
                 <div className="row px-4">
                     {
-                        data.map(item => (
+                        data.filter(item => item.userId === userId).map(item => (
                             <Card profile={profile} book={item} openDelete={openDelete} showUpdater={showUpdater}/>
                         ))
                     }

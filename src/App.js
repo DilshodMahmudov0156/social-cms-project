@@ -9,6 +9,10 @@ import {useEffect, useState} from "react";
 import { v4 as uuidv4} from "uuid";
 import UpdaterModal from "./components/updater-modal";
 import DeleteModal from "./components/delete-modal";
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 function App() {
     const [data, setData] = useState([]);
     const [myData, setMyData] = useState([]);
@@ -44,11 +48,11 @@ function App() {
         }
     }
     useEffect(() => {
-        fetch('http://localhost:3000/books')
+        fetch('http://localhost:3006/books')
             .then(response => response.json())
             .then(data => {
                 setData(data);
-                setMyData(data.filter(item => item.userId === userId));
+                // setMyData(data.filter(item => item.userId === userId));
             }).catch(error => {console.log(error)})
     }, []);
     const poster = async (e, obj) => {
@@ -59,7 +63,7 @@ function App() {
             userId: userId,
             userEmail: userEmail
         }
-        await fetch('http://localhost:3000/books', {
+        await fetch('http://localhost:3006/books', {
             method: 'POST',
             body: JSON.stringify(newObj)
         })
@@ -67,14 +71,14 @@ function App() {
         window.location.reload();
     }
     const deleter = async () => {
-        await fetch(`http://localhost:3000/books/${updateItem.id}`, {
+        await fetch(`http://localhost:3006/books/${updateItem.id}`, {
             method: 'DELETE',
         })
         window.location.reload();
     }
     const updater = async (e, obj) => {
         e.preventDefault();
-        await fetch(`http://localhost:3000/books/${updateItem.id}`, {
+        await fetch(`http://localhost:3006/books/${updateItem.id}`, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(obj)
@@ -83,6 +87,7 @@ function App() {
     }
     return (
         <div className='app'>
+            <ToastContainer/>
             {show? <MyModal makeShow={makeShow} poster={poster}/> : null}
             {showUpdaterModal? <UpdaterModal showUpdater={showUpdater} updateItem={updateItem} updater={updater}/>: null}
             {showDelete? <DeleteModal openDelete={openDelete} deleter={deleter}/>: null}
@@ -98,7 +103,7 @@ function App() {
                             <ProfilePage
                                 profile={true}
                                 makeShow={makeShow}
-                                data={myData}
+                                data={data}
                                 openDelete={openDelete}
                                 showUpdater={showUpdater}
                                 updateItem={updateItem}

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function NavBar() {
 
     const userId = localStorage.getItem("userId");
-    const photo = localStorage.getItem("userPhoto");
+    // const photo = localStorage.getItem("userPhoto");
 
     return (
         <nav>
@@ -37,7 +37,8 @@ function NavBar() {
                                 <div className="notify-point"></div>
                             </button>
                             <Link to="/profile" className="profile-image">
-                                <img src={photo} alt=""/>
+                                {/*<img src={photo} alt=""/>*/}
+                                <i className="bi bi-person-circle"></i>
                             </Link>
                         </div>
                         :
